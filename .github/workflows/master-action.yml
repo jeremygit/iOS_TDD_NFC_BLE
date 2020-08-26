@@ -1,0 +1,23 @@
+name: Push Master CI Flow
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  Test:
+    name: Build and Run Tests
+    runs-on: macOS-latest
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v1
+    - name: List Versions of Xcode
+      run: ls /Applications | grep Xcode
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_11.4.app
+    - name: Selected Xcode Version
+      run: /usr/bin/xcodebuild -version
+    - name: Xcode Test
+      run: xcodebuild clean test -scheme GitActionsTDD_BLENFC -project GitActionsTDD_BLENFC.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.4'
+    
