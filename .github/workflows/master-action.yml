@@ -35,7 +35,7 @@ jobs:
     - name: Xcode Build and Archive
       run: |
         xcodebuild clean build -scheme GitActionsTDD_BLENFC -project GitActionsTDD_BLENFC.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' \
-        archive -archivePath GitActionsTDD_BLENFC.archive
+        archive -allowProvisioningUpdates -archivePath GitActionsTDD_BLENFC.archive
     - name: Export Archive
       run: |
         xcodebuild -exportArchive -exportFormat ipa \
