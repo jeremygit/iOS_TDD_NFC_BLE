@@ -7,7 +7,7 @@ on:
 
 jobs:
   Test:
-    name: Build and Run Tests
+    name: Run Tests
     runs-on: macOS-latest
     steps:
     - name: Checkout Code
@@ -25,7 +25,9 @@ jobs:
 
   Build:
     needs: Test
+    name: Build
     runs-on: macOS-latest
+    steps:
     - name: Checkout Code
       uses: actions/checkout@v1
     - name: Select Xcode
