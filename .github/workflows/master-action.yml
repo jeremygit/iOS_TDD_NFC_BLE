@@ -39,6 +39,7 @@ jobs:
     - name: Export Archive
       run: |
         xcodebuild -exportArchive -exportFormat ipa \
+        -allowProvisioningUpdates \
         -archivePath GitActionsTDD_BLENFC.archive \
         -exportPath GitActionsTDD_BLENFC.ipa
     - name: Save Artifect
