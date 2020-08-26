@@ -32,7 +32,19 @@ jobs:
       uses: actions/checkout@v1
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_11.6_beta.app
-    - name: Xcode Test
-      run: xcodebuild clean build -scheme GitActionsTDD_BLENFC -project GitActionsTDD_BLENFC.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6'
+    - name: Xcode Build and Archive
+      run: |
+        xcodebuild clean build -scheme GitActionsTDD_BLENFC -project GitActionsTDD_BLENFC.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' \
+        archive -archivePath GitActionsTDD_BLENFC.archive
+    - name: Export Archive
+      run: |
+        xcodebuild -exportArchive -exportFormat ipa \
+        -archivePath GitActionsTDD_BLENFC.archive \
+        -exportPath GitActionsTDD_BLENFC.ipa
+    - name: Save Artifect
+      uses: actions/upload-artifact@v1
+      with:
+        name: GitActionsTDD_BLENFC.ipa
+        path: build/
 
     
