@@ -38,7 +38,7 @@ jobs:
         archive -allowProvisioningUpdates -archivePath GitActionsTDD_BLENFC.archive
     - name: Export Archive
       run: |
-        xcodebuild -exportArchive -exportFormat ipa \
+        xcodebuild -exportArchive \
         -allowProvisioningUpdates \
         -archivePath GitActionsTDD_BLENFC.archive \
         -exportPath GitActionsTDD_BLENFC.ipa
