@@ -34,10 +34,7 @@ jobs:
       run: sudo xcode-select -switch /Applications/Xcode_11.6_beta.app
     - name: Xcode Build
       run: |
-        xcodebuild clean build -allowProvisioningUpdates \
-        -scheme GitActionsTDD_BLENFC \
-        -project GitActionsTDD_BLENFC.xcodeproj \ 
-        -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6'
+        xcodebuild clean build -allowProvisioningUpdates -scheme GitActionsTDD_BLENFC -project GitActionsTDD_BLENFC.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6'
     - name: Xcode Archive
       run: |
           xcodebuild archive -allowProvisioningUpdates \
