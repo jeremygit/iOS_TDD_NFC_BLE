@@ -40,7 +40,7 @@ jobs:
       run: |
         xcodebuild -exportArchive \
         -allowProvisioningUpdates \
-        -exportOptionsPlist exportOptions.plist \
+        -exportOptionsPlist GitActionsTDD_BLENFC/exportOptions.plist \
         -archivePath GitActionsTDD_BLENFC.archive \
         -exportPath GitActionsTDD_BLENFC.ipa
     - name: Save Artifect
