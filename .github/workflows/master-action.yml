@@ -32,14 +32,21 @@ jobs:
       uses: actions/checkout@v1
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_11.6_beta.app
-    - name: Xcode Build and Archive
+    - name: Xcode Build
       run: |
-        xcodebuild clean build -scheme GitActionsTDD_BLENFC -project GitActionsTDD_BLENFC.xcodeproj -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6' \
-        archive -allowProvisioningUpdates -archivePath GitActionsTDD_BLENFC.archive
+        xcodebuild clean build -allowProvisioningUpdates \
+        -scheme GitActionsTDD_BLENFC \
+        -project GitActionsTDD_BLENFC.xcodeproj \ 
+        -destination 'platform=iOS Simulator,name=iPhone 11,OS=13.6'
+    - name: Xcode Archive
+      run: |
+          xcodebuild archive -allowProvisioningUpdates \
+          -scheme GitActionsTDD_BLENFC \
+          -project GitActionsTDD_BLENFC.xcodeproj \
+          -archivePath GitActionsTDD_BLENFC.archive
     - name: Export Archive
       run: |
-        xcodebuild -exportArchive \
-        -allowProvisioningUpdates \
+        xcodebuild -exportArchive -allowProvisioningUpdates \
         -exportOptionsPlist exportOptions.plist \
         -archivePath GitActionsTDD_BLENFC.archive \
         -exportPath GitActionsTDD_BLENFC.ipa
