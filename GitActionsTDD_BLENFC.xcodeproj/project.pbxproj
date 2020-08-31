@@ -16,6 +16,7 @@
 		3F65444E24F68981006E86B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F65444C24F68981006E86B1 /* LaunchScreen.storyboard */; };
 		3F65445924F68981006E86B1 /* GitActionsTDD_BLENFCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65445824F68981006E86B1 /* GitActionsTDD_BLENFCTests.swift */; };
 		3F65446424F68981006E86B1 /* GitActionsTDD_BLENFCUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F65446324F68981006E86B1 /* GitActionsTDD_BLENFCUITests.swift */; };
+		3FD4165224FCCF63005BC838 /* exportOptions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3FD4165124FCCF63005BC838 /* exportOptions.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		3F65445F24F68981006E86B1 /* GitActionsTDD_BLENFCUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GitActionsTDD_BLENFCUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F65446324F68981006E86B1 /* GitActionsTDD_BLENFCUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitActionsTDD_BLENFCUITests.swift; sourceTree = "<group>"; };
 		3F65446524F68981006E86B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FD4165124FCCF63005BC838 /* exportOptions.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = exportOptions.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				3F65444F24F68981006E86B1 /* Info.plist */,
 				3F65444224F6897E006E86B1 /* GitActionsTDD_BLENFC.xcdatamodeld */,
 				3F65444924F68980006E86B1 /* Preview Content */,
+				3FD4165124FCCF63005BC838 /* exportOptions.plist */,
 			);
 			path = GitActionsTDD_BLENFC;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				3F65444E24F68981006E86B1 /* LaunchScreen.storyboard in Resources */,
 				3F65444B24F68980006E86B1 /* Preview Assets.xcassets in Resources */,
 				3F65444824F68980006E86B1 /* Assets.xcassets in Resources */,
+				3FD4165224FCCF63005BC838 /* exportOptions.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
